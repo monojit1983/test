@@ -1,29 +1,29 @@
 GIT (Distributed version control syttem)----init,add,commit,push,pull
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-1. build AWS linux vm
-2. yum install update -y
-3. yum install update git -y
-4. git init (local repo)
-5. cat > file1
-6. this is my first file
-7. git status
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++              ===================
+1. Build from AWS linux vm                                                           |   W    | STAGGING|
+2. yum install update -y                                                             |   O    |  AREA   |
+3. yum install update git -y                                                         |   R    |=========|
+4. git init (local repo)                                                             |   K    |  LOCAL  |
+5. cat > file1 { can create others command touch, echo, vim }                        | SPACE  |  REPO   |
+6. this is my first file { content of the file }                                     |        |         |
+7. git status                                                                        ====================
 8. git add .
 9. git commit -m "First file"
-9.1 git commit -a -m "Correction needed"
+9.1 git commit -a -m "Correction needed" { edited add and commit in same time }
 10. git log
 11. git show <commit id>
 12. git remote add origin <copy local url> [ add local repo to central repo ]
-12.1 git config --global user.name "monojit1983"{ alternet add local reopo}
-12.2 git config --global user.email "monojitbera1983@gmail.com"{alternet add local repo}
+12.1 git config --global user.name "username"{ alternet add local reopo}
+12.2 git config --global user.email "mail id"{alternet add local repo}
 13. git push -u origin master
 14. username: github account 
 15. password : github password
-16. cat >file1
+16. cat >file1 { append file content}
 17. " write some thing"
 18. git status and the need to add
 19. git remote set-url origin git://this.is.new.url {change remote url}
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Create a new Linux-vm with git bash
 1. git init [.git ---create a dirrectory]
 2. git remote add origin <copy local url> [ add local repo to central repo ]
@@ -32,10 +32,10 @@ Create a new Linux-vm with git bash
 5. "again add some points"
 6. git status
 7. git add and commit then check repo
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 GIT -----ignore
 ==================
-1. vim .gitignore
+1. vim .gitignore { edit file and put into ignore file format}
 * .css
 * .java
 save and exit
@@ -50,7 +50,7 @@ save and exit
 10. git log -l ( latest one)
 11. git log --oneline ( all commit)
 12. git log --grep "ignore"
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 GIT Branch//Merge/conflict/Stash //Reset
 =================================
 1. git branch {* indicate preset branch}
@@ -66,7 +66,7 @@ Same file (diffrent conten diffrent branches)get merge in repo result-conflict
 ==================================
 Stash
 1. git stash { file move in stash storage}
-2. git stash list
+2. git stash list { to show the list of files}
 3. git stash apply stash@{list number}
 4. git add and commit
 5. git stash clear { to clear from stash storage}
@@ -78,32 +78,36 @@ After add then decide that data need to reset from stagging area.
 3. git reset --soft <privious commit id> {get back commit from stagging area}
 4. git reset --hard { file remove from workspace and stagging area both }
 5. git status
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 GIT Tag/ Clone / git reset vs git revert / Git-Lab
 ===================================================
 GIT Revert is After commited data need to reset from local repository. { it is reverted pulicaly }
-Revert command helps you undo an existing commit.Just like ignoring privious mail then need to correct resend mail.
+Revert command helps you undo an existing commit.Just like ignoring privious mail con then need to correct resend mail.
 delete not possible incorectmail sent as like incorrect data but revise data updated.
 1.  git revert <commit id>
 2. please correction in file and save.
 3. git log -- oneline
 4. git clean -n { untrack file deletion}
 5. git clean -f   { untrack file deletion forcefully }
-===================================================
+==============================================================
 Tag
 1. git tag -a <tag name> -m "command for tagging " <commit id>
 2. git show <tag name> { not required for commit id }
 3. git tag -d <tag name> { delete tag}
-===================================================
+==============================================================
 GIT Clone
-1. git clone <copy url of local repo> { copy all data of local repo}
+1. git clone <copy url of local repo> { copy all data from local repo}
 
-===================================================
+==============================================================
 GIT Rebase
 * It gets all unique commits from both branches and appllies one by one.
 *It rewrites commiyt history but does not create extra commit for merging.
 
-  
+1. git checkout <branch id> { for changing branch }
+2. git rebase main { rebase command only at main branch }
+3. git rebase --abort { cancel rebase}
+
+===============XXX====================XXX====================XXX=================XXX================   
 
 
 
